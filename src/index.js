@@ -4,9 +4,7 @@ const app = express()
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-    res.send("We are running!")
-})
+app.get("/", express.static("test-client"))
 
 app.post("/lechonkifier", lechonkify)
 
